@@ -34,6 +34,7 @@ class ATM {
     public void transfer(Account toAccount, double amount) {
         if (amount <= 0) {
             System.out.println("Invalid amount");
+            }
         } else if (account.getBalance() >= amount) {
             account.debit(amount);
             toAccount.credit(amount);
