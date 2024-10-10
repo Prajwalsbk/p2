@@ -15,6 +15,7 @@ class ATM {
     public void withdraw(double amount) {
         if (amount <= 0) {
             System.out.println("Invalid amount");
+            }
         } else if (account.getBalance() >= amount) {
             account.debit(amount);
             System.out.println("Successfully withdrew: $" + amount);
