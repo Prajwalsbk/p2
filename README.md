@@ -1,5 +1,6 @@
-# project2 
-#ATM interface
+#project2
+#ATM Interface
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
