@@ -47,7 +47,7 @@ class User {
     private String userPin;
     private Account account;
 
-    public User(String userId, String userPin, Account account) {
+  public User(String userId, String userPin, Account account) {
         this.userId = userId;
         this.userPin = userPin;
         this.account = account;
@@ -66,7 +66,7 @@ class Account {
     private double balance;
     private ArrayList<Transaction> transactionHistory;
 
-    public Account(double initialBalance) {
+   public Account(double initialBalance) {
         this.balance = initialBalance;
         this.transactionHistory = new ArrayList<>();
     }
@@ -96,12 +96,12 @@ class Transaction {
     private String type;
     private double amount;
 
-    public Transaction(String type, double amount) {
+ public Transaction(String type, double amount) {
         this.type = type;
         this.amount = amount;
     }
 
-    public String toString() {
+   public String toString() {
         return "Transaction: " + type + ", Amount: $" + amount;
     }
 }
@@ -117,7 +117,7 @@ class Transaction {
         System.out.print("Enter your User PIN: ");
         String userPin = scanner.nextLine();
 
-        if (authenticateUser(user1, userId, userPin)) {
+  if (authenticateUser(user1, userId, userPin)) {
             ATM atm = new ATM(user1.getAccount());
             boolean q = false;
             while (!q) {
@@ -173,11 +173,11 @@ class Transaction {
         }
     }
 
-    private static boolean authenticateUser(User user, String userId, String userPin) {
+  private static boolean authenticateUser(User user, String userId, String userPin) {
         return user.getUserId().equals(userId) && user.getUserPin().equals(userPin);
     }
 
-    private static double getValidAmount() {
+   private static double getValidAmount() {
         double amount;
         while (true) {
             try {
